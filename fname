@@ -1,23 +1,20 @@
-char *v2 = buff; // rbx
-int v4 = nameLength; // edi
-__int64 result; // rax
-int v6; // r8d
-unsigned int v7; // edx
+         // v2 is buffer
+            var v4 = nameLength;
+            var result = 22;
+            uint v7;
  
-result = fn_mem.Read<unsigned int>(g_Base + 0xDE33548) >> 5;
-v6 = 0;
- 
-if ( v4 )
-{
-	do
-	{
-		v7 = *v2++;
-		result = (unsigned int)(v6 + result + 96);
-		++v6;
-		*(v2 - 1) = (16 * v7) | (result ^ (v7 >> 4)) & 0xF;
-	}
-	while ( v6 < v4 );
-}
-
-
-namepool = 0xDF43840
+            if (v4 > 0)
+            {
+                var v5 = v4;
+                do
+                {
+                    byte v6 = *(byte*)v2;
+                    v2 = (byte*)(ushort*)((byte*)v2 + 1);
+                    v7 = (uint)(result + 45297);
+                    *((byte*)v2 - 1) = (byte)(v7 + ~v6);
+                    result = (int)((v7 << 8) | (v7 >> 8));
+                    --v5;
+                } while (v5 > 0);
+            }
+	    
+	      // NamePool = 0xE0A9E00
