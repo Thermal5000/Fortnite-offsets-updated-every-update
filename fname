@@ -1,20 +1,18 @@
-         // v2 is buffer
+        var v2 = (byte*)Unsafe.AsPointer(ref buff[0]);
             var v4 = nameLength;
-            var result = 22;
-            uint v7;
  
+            int result = M.Read<int>(World.pModuleBase + 0xDF98EEC);
+            int v7 = (result << 8) | (result >> 8);
+            var v8 = (short)(result >> 11);
             if (v4 > 0)
             {
-                var v5 = v4;
+                var v6 = v4;
                 do
                 {
-                    byte v6 = *(byte*)v2;
-                    v2 = (byte*)(ushort*)((byte*)v2 + 1);
-                    v7 = (uint)(result + 45297);
-                    *((byte*)v2 - 1) = (byte)(v7 + ~v6);
-                    result = (int)((v7 << 8) | (v7 >> 8));
-                    --v5;
-                } while (v5 > 0);
+                    v7 += (int)v8;
+                    *v2++ ^= (byte)v7;
+                    --v6;
+                } while (v6 > 0);
             }
 	    
-	      // NamePool = 0xE0A9E00
+	    //fname pool = 0xE0A5D80
