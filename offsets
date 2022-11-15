@@ -1,33 +1,18 @@
-UWorld: 0xE075F20
+#define OFFSET_UWORLD 0xE0CF488 //GWorld 
+#define OFFSET_GAME_INSTANCE 0x1A8 //OwningGameInstance
+#define OFFSET_LOCALPLAYERS 0x38 //LocalPlayers
+#define OFFSET_PLAYERCONTROLLER 0x30 //UPlayer    PlayerController
+#define OFFSET_PAWN 0x328 //APlayerController    AcknowledgedPawn
+#define OFFSET_PLAYERSTATE 0x2A8 //APawn    PlayerState
+#define OFFSET_ROOTCOMP 0x190 //AActor    RootComponent
+#define OFFSET_RELATIVELOCATION 0x128 //USceneComponent    RelativeLocation
+#define OFFSET_PERSISTENTLEVEL 0x30 //UWorld    PersistentLevel
+ 
+#define OFFSET_MESH 0x310 //ACharacter    Mesh
+#define OFFSET_TEAMINDEX 0x1098 //AFortPlayerStateAthena    TeamIndex 
+ 
+#define OFFSET_CURRENT_WEAPON 0x858 //AFortPawn -> CurrentWeapon
+#define OFFSET_WEAPON_DATA 0x3F0 //AFortWeapon -> Weapon Data
+#define OFFSET_DISPLAY_NAME 0x90    //constexpr auto DisplayName = 0x90; // FText
+#define OFFSET_RARITY 0x70  //Weapon Data -> Rarity
 
-[5076] GObjects->0x000000000DEB6260
-[5076] GNames->0x000000000E0A9E00
-[5076] GameViewport->0x858
-[5076] World->0x78
-[5076] CustomTimeDilation->0x64
-[5076] GameInstance->0x80
-[5076] PersistentLevel->0x30
-[5076] Levels->0x160
-[5076] LocalPlayers->0x38
-[5076] PlayerController->0x30
-[5076] PlayerCameraManager->0x338
-[5076] AcknowledgedPawn->0x328
-[5076] PlayerState->0x2A8
-[5076] Children->0x180
-[5076] RootComponent->0x190
-[5076] Mesh->0x310
-[5076] BoneArray->0x5A0
-[5076] TeamIndex->0x1098
-[5076] PrimaryPickupItemEntry->0x310
-[5076] DisplayName->0x90
-[5076] ItemDefinition->0x18
-[5076] CurrentWeapon->0x858
-[5076] WeaponData->0x3F0
-[5076] bIsABot->0x292
-[5076] Rarity->0x70
-[5076] bAlreadySearched->0x101A
-[5076] BuildingContainer::MarkerDisplay->0xEC0
-[5076] BuildingGameplayActor::MarkerDisplay->0x8D8
-[5076] FortAIPawn::MarkerDisplay->0x2BD8
-[5076] FortAthenaVehicle::MarkerDisplay->0xF58
-[5076] ReviveFromDBNOTime->0x4180
